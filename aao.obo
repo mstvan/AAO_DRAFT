@@ -1,6 +1,7 @@
 format-version: 1.2
 ontology: aao
-date: 25:10:2012 11:44
+date: 26:10:2012 1:45
+saved-by: dosumi
 auto-generated-by: mx, see http://purl.oclc.org/NET/mx-database
 default-namespace: AAO
 namespace-id-rule: * AAO:$sequence(7,0,9999999)$
@@ -503,9 +504,10 @@ relationship: BFO:0000050 AAO:0000101 ! antenna
 [Term]
 id: AAO:0000142
 name: apodeme
-def: "The process that is internal." [http:///api/ref/96591]
+def: "The area that corresponds with an integumentary invagination." [http:///api/ref/96591]
 xref: HAO:0000142
-is_a: AAO:0000822 ! process
+is_a: AAO:0000146 ! area
+relationship: BFO:0000050 AAO:0000240 ! cuticle
 
 [Term]
 id: AAO:0000143
@@ -517,7 +519,7 @@ is_a: AAO:0000142 ! apodeme
 [Term]
 id: AAO:0000144
 name: appendage
-def: "The anatomical structure that is connected to the body." [http:///api/ref/96591]
+def: "The integumantery evagination that is connected to the body via muscles." [http:///api/ref/96591]
 xref: HAO:0000144
 is_a: AAO:0000003 ! anatomical structure
 relationship: BFO:0000050 AAO:0000012 ! multi-cellular organism
@@ -545,9 +547,11 @@ is_a: AAO:0000008 ! anatomical line
 [Term]
 id: AAO:0000150
 name: articular process
-def: "The projection that bears the articular surface." [http:///api/ref/96591]
+def: "The cuticular protuberance that bears the articular surface." [http:///api/ref/96591]
+synonym: "articular protuberance" [http:///api/ref/96644]
 xref: HAO:0000150
-is_a: AAO:0000829 ! projection
+is_a: AAO:0000822 ! process
+relationship: BFO:0000050 AAO:0000909 ! sclerite
 
 [Term]
 id: AAO:0000151
@@ -566,7 +570,7 @@ is_a: AAO:0000146 ! area
 [Term]
 id: AAO:0000164
 name: bar
-def: "The process that is linear and wider proximally than distally." [http:///api/ref/96591]
+def: "The cuticular protuberance that is linear and wider proximally than distally." [http:///api/ref/96591]
 xref: HAO:0000164
 is_a: AAO:0000822 ! process
 relationship: BFO:0000050 AAO:0000909 ! sclerite
@@ -630,7 +634,7 @@ relationship: BFO:0000050 AAO:0000506 ! mandible
 [Term]
 id: AAO:0000182
 name: body
-def: "The anatomical cluster that is composed of the whole organism but which excludes the antennae, legs and wings." [http:///api/ref/96591]
+def: "The area that does not contain the appendages." [http:///api/ref/96591]
 synonym: "trunk" [http://api.hymao.org/api/ref/68619]
 xref: HAO:0000182
 is_a: AAO:0000041 ! anatomical cluster
@@ -656,7 +660,7 @@ relationship: BFO:0000050 AAO:0000513 ! maxilla
 [Term]
 id: AAO:0000188
 name: carina
-def: "The process that is linear and external." [http:///api/ref/96591]
+def: "The cuticular protuberance that is linear and external." [http:///api/ref/96591]
 synonym: "crest" [http://api.hymao.org/api/ref/67791]
 synonym: "lamella" [http://api.hymao.org/api/ref/67791, http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
 synonym: "lamina" [http://api.hymao.org/api/ref/67791]
@@ -671,7 +675,7 @@ id: AAO:0000191
 name: cercus
 def: "The sense organ that located apicolaterally on one of the apicalmost abdominal terga and attaches to a large nerve cord." [http:///api/ref/96591]
 synonym: "cercal plate" [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
-synonym: "larval pygopod" [http://api.hymao.org/api/ref/36875, http://api.hymao.org/api/ref/67781]
+synonym: "larval pygopod" [http://api.hymao.org/api/ref/67781, http://api.hymao.org/api/ref/36875]
 synonym: "penicillus" [http://api.hymao.org/api/ref/67828, http://api.hymao.org/api/ref/68619]
 synonym: "pygostyle" [http://api.hymao.org/api/ref/67781]
 synonym: "pygostylus" [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
@@ -682,7 +686,7 @@ is_a: AAO:0000930 ! sense organ
 [Term]
 id: AAO:0000198
 name: chalaza
-def: "The seta that is located on a process." [http:///api/ref/96591]
+def: "The seta that is located on an integumentary evagination." [http:///api/ref/96591]
 xref: HAO:0000198
 is_a: AAO:0000935 ! seta
 relationship: BFO:0000050 AAO:0000421 ! integument
@@ -729,7 +733,7 @@ id: AAO:0000217
 name: compound eye
 def: "The compound organ that is composed of ommatidia." [http:///api/ref/96591]
 synonym: "Auge" [http://api.hymao.org/api/ref/78598]
-synonym: "eye" [http://api.hymao.org/api/ref/68619, http://api.hymao.org/api/ref/78236]
+synonym: "eye" [http://api.hymao.org/api/ref/78236, http://api.hymao.org/api/ref/68619]
 xref: HAO:0000217
 is_a: AAO:0000024 ! compound organ
 relationship: BFO:0000050 AAO:0000397 ! head
@@ -747,7 +751,7 @@ relationship: BFO:0000050 AAO:0000151 ! articulation
 id: AAO:0000221
 name: conjunctiva
 def: "The area of the integument that is weakly sclerotized, with thin exocuticle." [http:///api/ref/96591]
-synonym: "arthrodial membrane" [http://api.hymao.org/api/ref/67791, ISBN:0521578906]
+synonym: "arthrodial membrane" [ISBN:0521578906, http://api.hymao.org/api/ref/67791]
 synonym: "corium" [http://api.hymao.org/api/ref/36875, http://api.hymao.org/api/ref/68619]
 xref: HAO:0000221
 is_a: AAO:0000146 ! area
@@ -828,7 +832,7 @@ xref: HAO:0000235
 [Term]
 id: AAO:0000240
 name: cuticle
-def: "The acellular anatomical structure that is the external layer of the integument (covers the entire body surface as well as lines ectodermal invaginations such as the stomodeum, proctodeum and tracheae) and produced by the epidermal cells." [http:///api/ref/96591]
+def: "The area that is acellular anatomical structure and is located externally of and produced by the epidermal cell and contains paralell chitin fibres." [http:///api/ref/96644]
 synonym: "cuticula" [http://api.hymao.org/api/ref/36875, http://api.hymao.org/api/ref/68619]
 synonym: "exoskeleton" [http://api.hymao.org/api/ref/68619]
 xref: HAO:0000240
@@ -1077,7 +1081,7 @@ relationship: BFO:0000050 AAO:0000895 ! reproductive system
 [Term]
 id: AAO:0000397
 name: head
-def: "The tagma that is located anterior to the thorax." [http:///api/ref/96591]
+def: "The region that contains the brain." [http:///api/ref/96591]
 xref: HAO:0000397
 is_a: AAO:0000988 ! tagma
 relationship: BFO:0000050 AAO:0000182 ! body
@@ -1166,7 +1170,7 @@ relationship: BFO:0000050 AAO:0000639 ! mouthparts
 [Term]
 id: AAO:0000494
 name: leg
-def: "The anatomical cluster that is composed of the coxa and all distal leg segments and is connected to the pectus." [http:///api/ref/96591]
+def: "The appendage that is paired, ventral and does not located on the head." [http:///api/ref/96591]
 xref: HAO:0000494
 is_a: AAO:0000041 ! anatomical cluster
 is_a: AAO:0000144 ! appendage
@@ -1297,9 +1301,9 @@ relationship: BFO:0000050 AAO:0000217 ! compound eye
 id: AAO:0000670
 name: oral foramen
 def: "The foramen that is located anteriorly/ventrally on the cranium in which the mouthparts are positioned." [http:///api/ref/96591]
-synonym: "buccal cavity" [http://api.hymao.org/api/ref/36913, http://api.hymao.org/api/ref/67791]
-synonym: "mouth cavity" [http://api.hymao.org/api/ref/67791, http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
-synonym: "oral fossa" [http://api.hymao.org/api/ref/36913, http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
+synonym: "buccal cavity" [http://api.hymao.org/api/ref/67791, http://api.hymao.org/api/ref/36913]
+synonym: "mouth cavity" [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm, http://api.hymao.org/api/ref/67791]
+synonym: "oral fossa" [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm, http://api.hymao.org/api/ref/36913]
 synonym: "proboscidial fossa" [http://api.hymao.org/api/ref/36916]
 xref: HAO:0000670
 is_a: AAO:0000345 ! foramen
@@ -1308,7 +1312,7 @@ is_a: AAO:0000345 ! foramen
 id: AAO:0000672
 name: orbit
 def: "The margin of the compound eye." [http:///api/ref/96591]
-synonym: "eye margin" [http://api.hymao.org/api/ref/67791, http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
+synonym: "eye margin" [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm, http://api.hymao.org/api/ref/67791]
 xref: HAO:0000672
 is_a: AAO:0000510 ! margin
 
@@ -1316,7 +1320,7 @@ is_a: AAO:0000510 ! margin
 id: AAO:0000681
 name: paddle shaped seta
 def: "The seta that is paddle-shaped and is located on the probasitarsus." [http:///api/ref/96591]
-synonym: "Putzhaar" [http://api.hymao.org/api/ref/43518, http://api.hymao.org/api/ref/68619]
+synonym: "Putzhaar" [http://api.hymao.org/api/ref/68619, http://api.hymao.org/api/ref/43518]
 xref: HAO:0000681
 is_a: AAO:0000935 ! seta
 
@@ -1366,7 +1370,7 @@ relationship: BFO:0000050 AAO:0000240 ! cuticle
 [Term]
 id: AAO:0000829
 name: projection
-def: "The process that is located on an edge." [http:///api/ref/96591]
+def: "The cuticular protuberance that is located on an edge." [http:///api/ref/96591]
 xref: HAO:0000829
 is_a: AAO:0000822 ! process
 
@@ -1558,7 +1562,7 @@ relationship: BFO:0000050 AAO:0001014 ! thoracic sternum
 [Term]
 id: AAO:0000949
 name: spine
-def: "The process that is multicellular, immovable, consists of non-specialized epidermal cells and the cuticle that is sectreted and/or adjacent with them and lacks non-sclerotised ring at the base." [http:///api/ref/96591]
+def: "The cuticular protuberance that is not surrounded by conjunctiva." [http:///api/ref/96591]
 synonym: "aculea" [http://api.hymao.org/api/ref/43406, http://api.hymao.org/api/ref/67791, http://api.hymao.org/api/ref/67829]
 xref: HAO:0000949
 is_a: AAO:0000822 ! process
@@ -1575,9 +1579,11 @@ relationship: BFO:0000050 AAO:0000929 ! segment
 [Term]
 id: AAO:0000951
 name: spur
-def: "The cuticular protuberance that is surrounded by conjunctiva." [http:///api/ref/96591]
+def: "The cuticular protuberance that is a sclerite." [http:///api/ref/96591]
 xref: HAO:0000951
+is_a: AAO:0000909 ! sclerite
 is_a: AAO:0000822 ! process
+relationship: BFO:0000050 AAO:0000421 ! integument
 
 [Term]
 id: AAO:0000955
@@ -1733,7 +1739,7 @@ relationship: BFO:0000050 AAO:0000506 ! mandible
 [Term]
 id: AAO:0001036
 name: tubercle
-def: "The process that is small and knob-like or round." [http:///api/ref/96591]
+def: "The cuticular protuberance that is small and knob-like or round." [http:///api/ref/96591]
 xref: HAO:0001036
 is_a: AAO:0000822 ! process
 
@@ -1836,10 +1842,10 @@ is_a: AAO:0001146 ! joint
 id: AAO:0001313
 name: procuticle
 def: "The cuticle that containes chitin fibrils and is located between the Schmidt's layer and the epicuticle." [http:///api/ref/96591]
-synonym: "chitinous cuticle" [http://api.hymao.org/api/ref/67791, ISBN:0521578906]
+synonym: "chitinous cuticle" [ISBN:0521578906, http://api.hymao.org/api/ref/67791]
 xref: HAO:0001313
-is_a: AAO:0000240 ! cuticle
-relationship: BFO:0000050 AAO:0000421 ! integument
+is_a: AAO:0000146 ! area
+relationship: BFO:0000050 AAO:0000240 ! cuticle
 
 [Term]
 id: AAO:0001392
@@ -1874,9 +1880,8 @@ relationship: BFO:0000050 AAO:0000015 ! abdomen
 
 [Term]
 id: AAO:0001431
-name: antennafer
-def: "The articular process that bears the antennal condyle of the cranium." [http:///api/ref/96591]
-synonym: "antennifer" [ISBN:3110148986]
+name: antennifer
+def: "The articular protuberance that bears the antennal condyle of the cranium." [http:///api/ref/96591]
 xref: HAO:0001431
 is_a: AAO:0000150 ! articular process
 relationship: BFO:0000050 AAO:0000103 ! antennal rim
@@ -1908,7 +1913,7 @@ relationship: BFO:0000050 AAO:0000909 ! sclerite
 [Term]
 id: AAO:0001506
 name: distal fossa of the tarsomere
-def: "The fossa that is located distodorsally on the tarsomere and accomodates the articular process of the subsequent tarsomere." [http:///api/ref/96591]
+def: "The fossa that is located distodorsally on the tarsomere and accomodates the proximal condyle of the subsequent tarsomere." [http:///api/ref/96591]
 xref: HAO:0001506
 is_a: AAO:0000353 ! fossa
 relationship: BFO:0000050 AAO:0000991 ! tarsomere
@@ -2109,10 +2114,10 @@ relationship: BFO:0000050 AAO:0000342 ! flagellomere
 [Term]
 id: AAO:0001732
 name: nervous system
-def: "The organ system that is composed of neurons and glial cells." [http:///api/ref/96591]
+def: "The anatomical cluster that is composed of neurons and glial cells." [http:///api/ref/96591]
 xref: HAO:0001732
 xref: FBbt:00005093
-is_a: AAO:0001599 ! organ system
+is_a: AAO:0000041 ! anatomical cluster
 relationship: BFO:0000050 AAO:0000012 ! multi-cellular organism
 
 [Term]
@@ -2132,16 +2137,16 @@ is_a: AAO:0000005 ! anatomical space
 [Term]
 id: AAO:0001764
 name: epicuticle
-def: "The cuticle that does not contain chitin fibrils and is located externally of the exocuticle." [http:///api/ref/96591]
+def: "The area that does not contain chitin fibrils and is located externally of the exocuticle." [http:///api/ref/96591]
 xref: HAO:0001764
-is_a: AAO:0000240 ! cuticle
-relationship: BFO:0000050 AAO:0000421 ! integument
+is_a: AAO:0000146 ! area
+relationship: BFO:0000050 AAO:0000240 ! cuticle
 
 [Term]
 id: AAO:0001767
 name: ventral clypeal margin
 def: "The margin that delimits the clypeus distally (ventrally or anteriorly depending on the orientation of the head)." [http:///api/ref/96591]
-synonym: "clypeal margin" [http://api.hymao.org/api/ref/67791, http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
+synonym: "clypeal margin" [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm, http://api.hymao.org/api/ref/67791]
 synonym: "epistomal margin" [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
 xref: HAO:0001767
 is_a: AAO:0000510 ! margin
@@ -2371,8 +2376,9 @@ relationship: BFO:0000050 AAO:0000421 ! integument
 
 [Term]
 id: AAO:0002021
-name: cuticular invagination
-def: "The area where the cuticle is invaginated." [http:///api/ref/96591]
+name: integumentary invagination
+def: "The invagination that is part of the integument." [http:///api/ref/96591]
+synonym: "cuticular invagination" [http:///api/ref/96591, http://api.hymao.org/api/ref/67791]
 synonym: "invagination" [http://api.hymao.org/api/ref/67791]
 xref: HAO:0002021
 is_a: AAO:0000146 ! area
