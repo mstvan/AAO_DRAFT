@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:11:2012 23:05
+date: 02:11:2012 23:25
 saved-by: djs93
 auto-generated-by: OBO-Edit 2.2
 subsetdef: candidate_for_obsoletion "To be used to flag a term for obsoletion - pending further discussion."
@@ -479,8 +479,7 @@ def: "The anatomical cluster that is composed of the scape, pedicel and flagellu
 comment: DOS: INSECT:0000007 A segmented appendage of the antennal segment. 'anatomical cluster' is the secret 'other'. Should be buried somewhere and never seen again...
 synonym: "Fühler" RELATED [http://api.hymao.org/api/ref/78598]
 xref: HAO:0000101
-is_a: AAO:0000041 ! anatomical cluster
-is_a: AAO:0000144 ! appendage
+is_a: INSECT:0000036 ! appendage
 relationship: BFO:0000050 AAO:0000397 ! head
 
 [Term]
@@ -519,7 +518,7 @@ def: "The area that corresponds with an integumentary invagination." [http:///ap
 comment: DOS: Needs to be made clear that this is an integumental structure. INSECT:0000118 'An internal cuticular process of the body wall.'
 xref: HAO:0000142
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000240 ! cuticle
+relationship: BFO:0000050 ARTHRO:0000006 ! cuticle
 
 [Term]
 id: AAO:0000143
@@ -528,15 +527,6 @@ def: "The apodeme that is tubercle-like or spine-like." [http:///api/ref/96591]
 comment: DOS: INSECT:0000119 def: An arm-like apodeme
 xref: HAO:0000143
 is_a: AAO:0000142 ! apodeme
-
-[Term]
-id: AAO:0000144
-name: appendage
-def: "The integumantery evagination that is connected to the body via muscles." [http:///api/ref/96591]
-comment: DOS: Think this is v.unsatisfactory. See latest CARO2 and ARTHRO/INSECT AO for much improved def and detailed taxonomy of appendages.
-xref: HAO:0000144
-is_a: AAO:0000003 ! anatomical structure
-relationship: BFO:0000050 AAO:0000012 ! multi-cellular organism
 
 [Term]
 id: AAO:0000145
@@ -550,7 +540,7 @@ name: area
 def: "The anatomical structure that is delimited by material or immaterial anatomical entities." [http:///api/ref/96591]
 comment: DOS: is this any different from 'material anatomical entity'?  From it's usage - I would suggest sub with 'region of integument': ARTHRO:0000004 - ARTHRO:0000004
 xref: HAO:0000146
-is_a: AAO:0000003 ! anatomical structure
+is_a: CARO:0000003 ! anatomical structure
 
 [Term]
 id: AAO:0000149
@@ -575,7 +565,7 @@ name: articulation
 def: "The anatomical cluster that is composed of the fossa and the condyle inserting into the fossa." [http:///api/ref/96591]
 comment: Do all articulations have condyle and fossa?  Or should this be more specific term - joint.
 xref: HAO:0000151
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 
 [Term]
 id: AAO:0000163
@@ -655,7 +645,7 @@ name: body
 def: "The area that does not contain the appendages." [http:///api/ref/96591]
 synonym: "trunk" RELATED [http://api.hymao.org/api/ref/68619]
 xref: HAO:0000182
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 relationship: BFO:0000050 AAO:0000012 ! multi-cellular organism
 
 [Term]
@@ -853,17 +843,6 @@ def: "This is a dummy definition for ontology class AAO:0000235." [http:///api/r
 xref: HAO:0000235
 
 [Term]
-id: AAO:0000240
-name: cuticle
-def: "The acellular anatomical structure that forms the outer layer of the arthropod integument. It is produced by the underlying epiderimal cells and contains arthropodin and parallel fibres of chitin." [http:///api/ref/96644]
-comment: old def - The area that is acellular anatomical structure and is located externally of and produced by the epidermal cell and contains paralell chitin fibres.
-synonym: "cuticula" RELATED [http://api.hymao.org/api/ref/36875, http://api.hymao.org/api/ref/68619]
-synonym: "exoskeleton" RELATED [http://api.hymao.org/api/ref/68619]
-xref: HAO:0000240
-is_a: CARO:0000040 ! acellular anatomical structure
-relationship: BFO:0000050 AAO:0000421 ! integument
-
-[Term]
 id: AAO:0000241
 name: depression
 def: "The area that is external, concave, and does not correspond to an apodeme." [http:///api/ref/96591]
@@ -935,8 +914,8 @@ name: endocuticle
 def: "The procuticle that is not tanned (sclerotised, proteins scarcely crosslinked) and located between the Schmidt's layer and the exocuticle." [http:///api/ref/96591]
 synonym: "endocuticula" RELATED [http://api.hymao.org/api/ref/36875, http://api.hymao.org/api/ref/68619]
 xref: HAO:0000290
-is_a: AAO:0000040 ! acellular anatomical structure
 is_a: AAO:0001313 ! procuticle
+is_a: CARO:0000040 ! acellular anatomical structure
 relationship: BFO:0000050 AAO:0000421 ! integument
 
 [Term]
@@ -977,7 +956,7 @@ id: AAO:0000315
 name: exuvia
 def: "The cuticle that is discarded after a molt." [http:///api/ref/96591]
 xref: HAO:0000315
-is_a: AAO:0000240 ! cuticle
+is_a: ARTHRO:0000006 ! cuticle
 
 [Term]
 id: AAO:0000327
@@ -1003,7 +982,7 @@ id: AAO:0000343
 name: flagellum
 def: "The anatomical cluster composed of flagellomeres." [http:///api/ref/96591]
 xref: HAO:0000343
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 
 [Term]
 id: AAO:0000344
@@ -1097,7 +1076,7 @@ id: AAO:0000375
 name: gland
 def: "The anatomical cluster that is composed of epithelial cell(s) that secrete or excrete materials not related to their ordinary metabolic needs." [http:///api/ref/96591]
 xref: HAO:0000375
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 relationship: BFO:0000050 AAO:0000182 ! body
 
 [Term]
@@ -1122,7 +1101,7 @@ name: head capsule
 def: "The anatomical cluster that is composed of the cranium and compound eye cuticle." [http:///api/ref/96591]
 comment: FBbt:00004482 ;  head capsule . def  - The fused, compact cephalic plates that comprise the head, excluding the eyes, antennae and mouthparts. [ISBN:978-3-11-014898-5]
 xref: HAO:0000398
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 relationship: BFO:0000050 AAO:0000397 ! head
 
 [Term]
@@ -1139,7 +1118,7 @@ id: AAO:0000418
 name: inflection
 def: "The anatomical cluster that is composed of a ridge that extends along the margin of a sclerite and the marginal area of the sclerite delimited from the sclerite by the ridge articulating with the inflection of another sclerite." [http:///api/ref/96591]
 xref: HAO:0000418
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 relationship: BFO:0000050 AAO:0000909 ! sclerite
 
 [Term]
@@ -1205,8 +1184,7 @@ name: leg
 def: "The appendage that is paired, ventral and does not located on the head." [http:///api/ref/96591]
 comment: INSECT defines all appendages by segment + dorsal vs ventral location. So, leg is a type of ventral thoracic appendage.  General reconciliation effort neeed to bring together top-down and bottom-up defs.
 xref: HAO:0000494
-is_a: AAO:0000041 ! anatomical cluster
-is_a: AAO:0000144 ! appendage
+is_a: INSECT:0000036 ! appendage
 relationship: BFO:0000050 AAO:0001015 ! thorax
 
 [Term]
@@ -1246,8 +1224,7 @@ id: AAO:0000513
 name: maxilla
 def: "The anatomical cluster that consists of cardo, stipes, galea, lacinia and maxillary palps. The maxilla is situated lateral to the labium." [http:///api/ref/96591]
 xref: HAO:0000513
-is_a: AAO:0000041 ! anatomical cluster
-is_a: AAO:0000144 ! appendage
+is_a: INSECT:0000036 ! appendage
 
 [Term]
 id: AAO:0000514
@@ -1278,7 +1255,7 @@ id: AAO:0000639
 name: mouthparts
 def: "The anatomical cluster that is composed of the labrum, epipharyngeal wall, hypopharyngeal wall (including the sitophore), mandibles, maxillae, labium and conjunctivae connecting them." [http:///api/ref/96591]
 xref: HAO:0000639
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 
 [Term]
 id: AAO:0000640
@@ -1405,7 +1382,7 @@ synonym: "cuticular protuberance" RELATED [http:///api/ref/96644]
 synonym: "protuberance" RELATED [http://api.hymao.org/api/ref/36877]
 xref: HAO:0000822
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000240 ! cuticle
+relationship: BFO:0000050 ARTHRO:0000006 ! cuticle
 
 [Term]
 id: AAO:0000829
@@ -1450,7 +1427,7 @@ name: row
 def: "The anatomical cluster that is composed of repeated units of anatomical structures." [http:///api/ref/96591]
 comment: presumably need to be aligned too.
 xref: HAO:0000901
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 relationship: BFO:0000050 AAO:0000909 ! sclerite
 
 [Term]
@@ -1525,7 +1502,7 @@ name: segment
 def: "The anatomical cluster that is connected to other segments via conjunctivae and muscles and is delimited by its sclerites." [http:///api/ref/96591]
 comment: DOS - This really needs to be top down to make sense
 xref: HAO:0000929
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 relationship: BFO:0000050 AAO:0000012 ! multi-cellular organism
 
 [Term]
@@ -1615,7 +1592,7 @@ id: AAO:0000950
 name: spiracle
 def: "The anatomical cluster that is composed of the distal end of the trachea and the margin of the sclerite or conjunctiva surrounding the spiracular opening." [http:///api/ref/96591]
 xref: HAO:0000950
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 relationship: BFO:0000050 AAO:0000929 ! segment
 
 [Term]
@@ -1852,7 +1829,7 @@ id: AAO:0001146
 name: joint
 def: "The anatomical cluster that is composed of two sclerites connected by at least one articulation and the articular membrane located connecting the two sclerite." [http:///api/ref/96591]
 xref: HAO:0001146
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 
 [Term]
 id: AAO:0001172
@@ -1890,7 +1867,7 @@ def: "The cuticle that containes chitin fibrils and is located between the Schmi
 synonym: "chitinous cuticle" RELATED [http://api.hymao.org/api/ref/67791, ISBN:0521578906]
 xref: HAO:0001313
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000240 ! cuticle
+relationship: BFO:0000050 ARTHRO:0000006 ! cuticle
 
 [Term]
 id: AAO:0001392
@@ -2010,7 +1987,7 @@ name: chorion
 def: "A hard shell external to the vitelline membrane of the egg." [http:///api/ref/96591]
 xref: FBbt:00000038
 xref: HAO:0001547
-is_a: AAO:0000040 ! acellular anatomical structure
+is_a: CARO:0000040 ! acellular anatomical structure
 relationship: BFO:0000050 AAO:0000286 ! egg
 
 [Term]
@@ -2162,7 +2139,7 @@ name: nervous system
 def: "The anatomical cluster that is composed of neurons and glial cells." [http:///api/ref/96591]
 xref: FBbt:00005093
 xref: HAO:0001732
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 relationship: BFO:0000050 AAO:0000012 ! multi-cellular organism
 
 [Term]
@@ -2185,7 +2162,7 @@ name: epicuticle
 def: "The area that does not contain chitin fibrils and is located externally of the exocuticle." [http:///api/ref/96591]
 xref: HAO:0001764
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000240 ! cuticle
+relationship: BFO:0000050 ARTHRO:0000006 ! cuticle
 
 [Term]
 id: AAO:0001767
@@ -2201,7 +2178,7 @@ id: AAO:0001768
 name: external female genitalia
 def: "The anatomical cluster that composed of the median oviduct, spermatheca and the ovipositor apparatus." [http:///api/ref/96591]
 xref: HAO:0001768
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 
 [Term]
 id: AAO:0001769
@@ -2324,7 +2301,7 @@ def: "The muscle that is attached at either end to the cuticle." [http:///api/re
 synonym: "somatic muscle" RELATED [http://api.hymao.org/api/ref/96367]
 xref: HAO:0001922
 is_a: AAO:0000641 ! muscle
-relationship: AAO:attached_to AAO:0000240 ! cuticle
+relationship: AAO:attached_to ARTHRO:0000006 ! cuticle
 
 [Term]
 id: AAO:0001923
@@ -2372,7 +2349,7 @@ name: setal pit
 def: "The impression that is setiferous." [http:///api/ref/96591]
 xref: HAO:0001958
 is_a: AAO:0000417 ! impression
-relationship: BFO:0000050 AAO:0000240 ! cuticle
+relationship: BFO:0000050 ARTHRO:0000006 ! cuticle
 
 [Term]
 id: AAO:0001964
@@ -2388,7 +2365,7 @@ name: secretory pore
 def: "The anatomical space that corresponds to the distal end of an exocrine gland." [http:///api/ref/96591]
 xref: HAO:0001966
 is_a: AAO:0000005 ! anatomical space
-relationship: BFO:0000050 AAO:0000240 ! cuticle
+relationship: BFO:0000050 ARTHRO:0000006 ! cuticle
 
 [Term]
 id: AAO:0001970
@@ -2404,7 +2381,7 @@ def: "A 3D region in space without well-defined compartmental boundaries; for ex
 comment: DOS:  This term and definition look dodgy to me for a variety of reasons.  Seems odd to have  vagueness vs crispness of spatial boundaries as a differentium. A "3D region in space" does not have mass - even though this classified as an anatomical structure, which does.  'Compartmental boudary' has a specific meaning to developmental biologists that is presumably not intended here.
 subset: candidate_for_obsoletion
 xref: HAO:0001980
-is_a: AAO:0000006 ! material anatomical entity
+is_a: CARO:0000006 ! material anatomical entity
 
 [Term]
 id: AAO:0001981
@@ -2420,7 +2397,7 @@ id: AAO:0001990
 name: pilosity
 def: "The anatomical cluster that is composed of setae." [http:///api/ref/96591]
 xref: HAO:0001990
-is_a: AAO:0000041 ! anatomical cluster
+is_a: CARO:0000041 ! clustered anatomical group
 relationship: BFO:0000050 AAO:0000421 ! integument
 
 [Term]
@@ -2431,7 +2408,7 @@ synonym: "cuticular invagination" RELATED [http:///api/ref/96591, http://api.hym
 synonym: "invagination" RELATED [http://api.hymao.org/api/ref/67791]
 xref: HAO:0002021
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000240 ! cuticle
+relationship: BFO:0000050 ARTHRO:0000006 ! cuticle
 
 [Term]
 id: ARHTRO:0000101
@@ -2534,9 +2511,15 @@ relationship: BFO:0000050 ARTHRO:0000006 ! cuticle
 [Term]
 id: ARTHRO:0000006
 name: cuticle
-namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
-def: "The outer, acellular layer of the arthropod integument.  Contains chitin and arthropodin." []
+alt_id: AAO:0000240
+def: "MERGED DEFINITION:\nTARGET DEFINITION: The outer, acellular layer of the arthropod integument.  Contains chitin and arthropodin.\n--------------------\nSOURCE DEFINITION: The acellular anatomical structure that forms the outer layer of the arthropod integument. It is produced by the underlying epiderimal cells and contains arthropodin and parallel fibres of chitin." []
+comment: old def - The area that is acellular anatomical structure and is located externally of and produced by the epidermal cell and contains paralell chitin fibres.
+synonym: "cuticle" EXACT []
+synonym: "cuticula" RELATED [http://api.hymao.org/api/ref/36875, http://api.hymao.org/api/ref/68619]
+synonym: "exoskeleton" RELATED [http://api.hymao.org/api/ref/68619]
+xref: HAO:0000240
 is_a: CARO:0000040 ! acellular anatomical structure
+relationship: BFO:0000050 AAO:0000421 ! integument
 relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 property_value: IAO:0000589 "arthropod cuticle" xsd:string
 
@@ -5049,7 +5032,13 @@ property_value: IAO:0000589 "insect metathoracic segment" xsd:string
 id: INSECT:0000036
 name: appendage
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
+alt_id: AAO:0000144
+def: "The integumentary evagination that is connected to the body via muscles." []
+comment: DOS: Think this is v.unsatisfactory. See latest CARO2 and ARTHRO/INSECT AO for much improved def and detailed taxonomy of appendages.
+synonym: "appendage" EXACT []
+xref: HAO:0000144
 is_a: CARO:0010003 ! appendage
+relationship: BFO:0000050 AAO:0000012 ! multi-cellular organism
 relationship: BFO:0000050 INSECT:0000069 ! insect
 property_value: IAO:0000589 "insect appendage" xsd:string
 
