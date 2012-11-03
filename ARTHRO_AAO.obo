@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:11:2012 23:25
+date: 03:11:2012 00:10
 saved-by: djs93
 auto-generated-by: OBO-Edit 2.2
 subsetdef: candidate_for_obsoletion "To be used to flag a term for obsoletion - pending further discussion."
@@ -116,7 +116,7 @@ def: "The tagma that is located posterior to the thorax." [http:///api/ref/96591
 comment: DOS: located immediately posterior to the thorax?  formalise with immediately_posterior_to - subproperty of adjacent_to?
 synonym: "der Hinterleib" RELATED [http://api.hymao.org/api/ref/78598]
 xref: HAO:0000015
-is_a: AAO:0000988 ! tagma
+is_a: INSECT:0000048 ! tagma
 
 [Term]
 id: AAO:0000016
@@ -401,9 +401,9 @@ is_a: AAO:0000375 ! gland
 [Term]
 id: AAO:0000082
 name: acetabulum
-def: "The area that is concave and accommodates the base of a segment." [http:///api/ref/96591]
+def: "The sclerite surface that is concave and that accommodates another sclerite surface and that is adjacent to a foramen." [http:///api/ref/96591]
 xref: HAO:0000082
-is_a: AAO:0000146 ! area
+is_a: ARTHRO:0000008 ! sclerite surface
 
 [Term]
 id: AAO:0000085
@@ -434,7 +434,7 @@ id: AAO:0000089
 name: adult tagma
 def: "The tagma that is part of the adult." [http:///api/ref/96591]
 xref: HAO:0000089
-is_a: AAO:0000988 ! tagma
+is_a: INSECT:0000048 ! tagma
 relationship: BFO:0000050 AAO:0000087 ! adult
 
 [Term]
@@ -453,7 +453,7 @@ comment: DOS: should annulus be a sclerite or an appendage subdivision?  Former 
 synonym: "mere" RELATED [http://api.hymao.org/api/ref/68619]
 xref: HAO:0000096
 is_a: AAO:0000909 ! sclerite
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0000098
@@ -539,6 +539,7 @@ id: AAO:0000146
 name: area
 def: "The anatomical structure that is delimited by material or immaterial anatomical entities." [http:///api/ref/96591]
 comment: DOS: is this any different from 'material anatomical entity'?  From it's usage - I would suggest sub with 'region of integument': ARTHRO:0000004 - ARTHRO:0000004
+subset: candidate_for_obsoletion
 xref: HAO:0000146
 is_a: CARO:0000003 ! anatomical structure
 
@@ -700,7 +701,7 @@ def: "The seta that is located on an integumentary evagination." [http:///api/re
 comment: DOS: How generally used is this term?
 xref: HAO:0000198
 is_a: AAO:0000935 ! seta
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0000200
@@ -717,7 +718,7 @@ def: "The anatomical space that is the anteriormost part of the alimentary canal
 comment: Space or portion of pharynx?  Looks like this is equivalent to cibarial lumen in FBbt.  For cibarium:  FBbt:00004526 ; adult cibarium def: The proximal portion of the adult pharynx, which functions as a sucking pump. It consists of two arched sclerotized plates. The posterior plate is fixed in position by its connections with the clypeus. The anterior plate fits against the concave side of the posterior plate and bears a ridge shaped apodeme (apodemal carina) that is attached to large dilator muscles that attach to clypeus. Their contraction pulls the anterior plate forward, enlarging the cibarial lumen and thus producing suction.
 synonym: "sucking pump" RELATED [http://api.hymao.org/api/ref/36875]
 xref: HAO:0000201
-is_a: AAO:0000005 ! anatomical space
+is_a: CARO:0000005 ! anatomical space
 
 [Term]
 id: AAO:0000202
@@ -768,7 +769,7 @@ synonym: "arthrodial membrane" RELATED [http://api.hymao.org/api/ref/67791, ISBN
 synonym: "corium" RELATED [http://api.hymao.org/api/ref/36875, http://api.hymao.org/api/ref/68619]
 xref: HAO:0000221
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0000223
@@ -906,7 +907,7 @@ name: encircling groove
 def: "The anatomical space that surrounds the plate-like structure in a multiporous plate sensillum." [http:///api/ref/96591]
 comment: very general sounding label for a very specific structure.
 xref: HAO:0000289
-is_a: AAO:0000005 ! anatomical space
+is_a: CARO:0000005 ! anatomical space
 
 [Term]
 id: AAO:0000290
@@ -916,7 +917,7 @@ synonym: "endocuticula" RELATED [http://api.hymao.org/api/ref/36875, http://api.
 xref: HAO:0000290
 is_a: AAO:0001313 ! procuticle
 is_a: CARO:0000040 ! acellular anatomical structure
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0000298
@@ -925,7 +926,7 @@ def: "The epithelium that is located in the integument and composed of epidermal
 comment: CARO2: CARO:0002000 ;  epidermis def - Epithelium of the integumentary system.
 xref: HAO:0000298
 is_a: AAO:0000066 ! epithelium
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0000309
@@ -949,7 +950,7 @@ def: "The procuticle that is tanned (sclerotised, proteins are highly crosslinke
 synonym: "exocuticula" RELATED [http://api.hymao.org/api/ref/36875, http://api.hymao.org/api/ref/68619]
 xref: HAO:0000311
 is_a: AAO:0001313 ! procuticle
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0000315
@@ -998,7 +999,7 @@ name: foramen
 def: "The anatomical space that is surrounded by sclerites and allows for the passage of haemolymph, nerves and tracheae." [http:///api/ref/96591]
 comment: DOS: FBbt:00004478;  foramen def: An aperture in some gross body part. Most commonly used for apertures in the exoskeleton, but also used for internal structures such as the esophageal foramen of the brain. [FBC:DOS&SR, FBC:gg]
 xref: HAO:0000345
-is_a: AAO:0000005 ! anatomical space
+is_a: CARO:0000005 ! anatomical space
 
 [Term]
 id: AAO:0000347
@@ -1092,7 +1093,7 @@ id: AAO:0000397
 name: head
 def: "The region that contains the brain." [http:///api/ref/96591]
 xref: HAO:0000397
-is_a: AAO:0000988 ! tagma
+is_a: INSECT:0000048 ! tagma
 relationship: BFO:0000050 AAO:0000182 ! body
 
 [Term]
@@ -1122,15 +1123,6 @@ is_a: CARO:0000041 ! clustered anatomical group
 relationship: BFO:0000050 AAO:0000909 ! sclerite
 
 [Term]
-id: AAO:0000421
-name: integument
-def: "The anatomical system that forms the covering layer of the animal, ectodermal in origin and composed of epidermal cells producing the cuticle." [http:///api/ref/96591]
-comment: DOS: looks good, but note more general def in CARO2: CARO:0002001 ; integumentary system. Def - Connected anatomical system that forms a barrier between an animal and its environment - generally consisting of an epidermis, which may be covered by some acellular structure.
-synonym: "body wall" RELATED [http://api.hymao.org/api/ref/36875, http://api.hymao.org/api/ref/68619]
-xref: HAO:0000421
-is_a: AAO:0000011 ! anatomical system
-
-[Term]
 id: AAO:0000431
 name: interommatidial seta
 def: "The seta that is located at the intersection of the margins of three ommatidiae." [http:///api/ref/96591]
@@ -1151,7 +1143,7 @@ name: intersegmentalia
 def: "The sclerite that is located on the intersegmental membrane." [http:///api/ref/96591]
 xref: HAO:0000436
 is_a: AAO:0000909 ! sclerite
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0000437
@@ -1266,7 +1258,7 @@ synonym: "elongate placoid sensillum" RELATED [http://api.hymao.org/api/ref/6861
 synonym: "pore plates" RELATED [http://api.hymao.org/api/ref/36919, http://api.hymao.org/api/ref/68619]
 synonym: "rhinaria" RELATED [http://api.hymao.org/api/ref/36916]
 xref: HAO:0000640
-is_a: AAO:0000933 ! sensillum
+is_a: INSECT:0000005 ! sensillum
 
 [Term]
 id: AAO:0000641
@@ -1347,7 +1339,7 @@ name: patch
 def: "The area that is rounded and differs from surrounding regions in sculpture, setae, and/or pigmentation." [http:///api/ref/96591]
 xref: HAO:0000704
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0000718
@@ -1478,7 +1470,7 @@ synonym: "plate" RELATED [http://api.hymao.org/api/ref/68619]
 synonym: "sclerome" RELATED [http://api.hymao.org/api/ref/78428]
 xref: HAO:0000909
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0000912
@@ -1522,19 +1514,11 @@ xref: HAO:0000931
 is_a: AAO:0000704 ! patch
 
 [Term]
-id: AAO:0000933
-name: sensillum
-def: "A sense organ embedded in the integument and consisting of one or a cluster of sensory neurons and associated sensory structures, support cells and glial cells forming a single organized unit with a largely bona fide boundary." [http:///api/ref/96591]
-xref: FBbt:00007152
-xref: HAO:0000933
-is_a: AAO:0000930 ! sense organ
-
-[Term]
 id: AAO:0000934
 name: sensillum trichodeum curvatum
 def: "The sensillum that is curved." [http:///api/ref/96591]
 xref: HAO:0000934
-is_a: AAO:0000933 ! sensillum
+is_a: INSECT:0000005 ! sensillum
 relationship: BFO:0000050 AAO:0000342 ! flagellomere
 
 [Term]
@@ -1544,7 +1528,7 @@ def: "The sensillum that is multicellular and consists of trichogen, tormogen,  
 synonym: "bristle" RELATED [http://api.hymao.org/api/ref/37495]
 synonym: "trichoid sensillum" RELATED [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
 xref: HAO:0000935
-is_a: AAO:0000933 ! sensillum
+is_a: INSECT:0000005 ! sensillum
 
 [Term]
 id: AAO:0000936
@@ -1602,7 +1586,7 @@ def: "The cuticular protuberance that is a sclerite." [http:///api/ref/96591]
 xref: HAO:0000951
 is_a: AAO:0000822 ! process
 is_a: AAO:0000909 ! sclerite
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0000955
@@ -1620,7 +1604,7 @@ def: "The area that is located on the integument and is ventral of the ventral d
 xref: HAO:0000956
 is_a: AAO:0000146 ! area
 relationship: BFO:0000050 AAO:0000183 ! body segment
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0000958
@@ -1647,14 +1631,6 @@ def: "The line that marks the fusion of two ancestral sclerites." [http:///api/r
 comment: DOS: Evolutionary-historical differentium
 xref: HAO:0000982
 is_a: AAO:0001586 ! line
-
-[Term]
-id: AAO:0000988
-name: tagma
-def: "The organism subdivision that is composed of segments." [http:///api/ref/96591]
-comment: DOS: CARO2:  CARO:0010006 ;  tagma def: A subdivision of the organism along the anterior-posterior axis that consists of multiple adjacent segments that are either fused, and/or share more structure with each other than with segments in adjacent tagmata.
-xref: HAO:0000988
-is_a: AAO:0000032 ! organism subdivision
 
 [Term]
 id: AAO:0000991
@@ -1707,7 +1683,7 @@ synonym: "notum" RELATED [http://api.hymao.org/api/ref/78439]
 xref: HAO:0001006
 is_a: AAO:0000146 ! area
 relationship: BFO:0000050 AAO:0000183 ! body segment
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0001007
@@ -1737,7 +1713,7 @@ id: AAO:0001015
 name: thorax
 def: "The tagma that is composed of the prothorax, mesothorax and metathorax." [http:///api/ref/96591]
 xref: HAO:0001015
-is_a: AAO:0000988 ! tagma
+is_a: INSECT:0000048 ! tagma
 
 [Term]
 id: AAO:0001017
@@ -2061,8 +2037,8 @@ id: AAO:0001586
 name: line
 def: "The anatomical structure that is linear." [http:///api/ref/96591]
 xref: HAO:0001586
-is_a: AAO:0000003 ! anatomical structure
-relationship: BFO:0000050 AAO:0000421 ! integument
+is_a: CARO:0000003 ! anatomical structure
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0001587
@@ -2099,7 +2075,7 @@ name: row of spurs
 def: "The row that is composed of spurs." [http:///api/ref/96591]
 xref: HAO:0001686
 is_a: AAO:0000901 ! row
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0001727
@@ -2154,7 +2130,7 @@ id: AAO:0001740
 name: pharynx
 def: "The anatomical space that is located proximal to the cibarium." [http:///api/ref/96591]
 xref: HAO:0001740
-is_a: AAO:0000005 ! anatomical space
+is_a: CARO:0000005 ! anatomical space
 
 [Term]
 id: AAO:0001764
@@ -2317,7 +2293,7 @@ def: "The evagination that is part of the integument." [http:///api/ref/96644]
 synonym: "integumentary evagination" RELATED [http:///api/ref/96644]
 xref: HAO:0001924
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0001936
@@ -2356,15 +2332,15 @@ id: AAO:0001964
 name: aporous sensillum
 def: "The sensillum whose cuticular component is without any opening." [http:///api/ref/96591]
 xref: HAO:0001964
-is_a: AAO:0000933 ! sensillum
-relationship: BFO:0000050 AAO:0000421 ! integument
+is_a: INSECT:0000005 ! sensillum
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0001966
 name: secretory pore
 def: "The anatomical space that corresponds to the distal end of an exocrine gland." [http:///api/ref/96591]
 xref: HAO:0001966
-is_a: AAO:0000005 ! anatomical space
+is_a: CARO:0000005 ! anatomical space
 relationship: BFO:0000050 ARTHRO:0000006 ! cuticle
 
 [Term]
@@ -2398,7 +2374,7 @@ name: pilosity
 def: "The anatomical cluster that is composed of setae." [http:///api/ref/96591]
 xref: HAO:0001990
 is_a: CARO:0000041 ! clustered anatomical group
-relationship: BFO:0000050 AAO:0000421 ! integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
 id: AAO:0002021
@@ -2414,7 +2390,13 @@ relationship: BFO:0000050 ARTHRO:0000006 ! cuticle
 id: ARHTRO:0000101
 name: integumentary system
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
-def: "Integumentary system of a member of the arthropoda. Consists of an epiderimis that is overlain by a chitinous exoskeleton." []
+alt_id: AAO:0000421
+def: "MERGED DEFINITION:\nTARGET DEFINITION: Integumentary system of a member of the arthropoda. Consists of an epiderimis that is overlain by a chitinous exoskeleton.\n--------------------\nSOURCE DEFINITION: The anatomical system that forms the covering layer of the animal, ectodermal in origin and composed of epidermal cells producing the cuticle." []
+comment: DOS: looks good, but note more general def in CARO2: CARO:0002001 ; integumentary system. Def - Connected anatomical system that forms a barrier between an animal and its environment - generally consisting of an epidermis, which may be covered by some acellular structure.
+synonym: "body wall" RELATED [http://api.hymao.org/api/ref/36875, http://api.hymao.org/api/ref/68619]
+synonym: "integument" EXACT []
+xref: HAO:0000421
+is_a: AAO:0000011 ! anatomical system
 is_a: CARO:0002001 ! integumentary system
 relationship: BFO:0000050 TAXON:0000000 ! arthropod
 property_value: IAO:0000589 "arthropod integumentary system" xsd:string
@@ -2498,7 +2480,7 @@ id: ARTHRO:0000004
 name: region of integument
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
 def: "A region of the integument of an arthropod, consisting of underlying epidermis and overlying cuticle." []
-is_a: CARO:0000043 ! tissue
+is_a: CARO:0002006 ! region of integument
 property_value: IAO:0000589 "region of arthropod integument" xsd:string
 
 [Term]
@@ -2519,7 +2501,6 @@ synonym: "cuticula" RELATED [http://api.hymao.org/api/ref/36875, http://api.hyma
 synonym: "exoskeleton" RELATED [http://api.hymao.org/api/ref/68619]
 xref: HAO:0000240
 is_a: CARO:0000040 ! acellular anatomical structure
-relationship: BFO:0000050 AAO:0000421 ! integument
 relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 property_value: IAO:0000589 "arthropod cuticle" xsd:string
 
@@ -3203,6 +3184,12 @@ namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/
 def: "An anatomical group whose members are arranged in a line." []
 comment: Examples include the rows of sense organs commonly found in the cuticles of insects.
 is_a: CARO:0000054 ! anatomical group
+
+[Term]
+id: CARO:0002006
+name: region of integument
+def: "An anatomical structure consisting of an area of an integumentary surface and any underlying integumental structures." [FBC:DOS]
+is_a: CARO:0000003 ! anatomical structure
 
 [Term]
 id: CARO:0010000
@@ -4774,6 +4761,11 @@ property_value: IAO:0000589 "insect chaeta" xsd:string
 id: INSECT:0000005
 name: sensillum
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
+alt_id: AAO:0000933
+def: "A sense organ embedded in the integument and consisting of one or a cluster of sensory neurons and associated sensory structures, support cells and glial cells forming a single organized unit with a largely bona fide boundary." []
+synonym: "sensillum" EXACT []
+xref: FBbt:00007152
+xref: HAO:0000933
 is_a: ARTHRO:0000002 ! sensillum
 relationship: BFO:0000050 INSECT:0000069 ! insect
 relationship: BFO:000015 GO:0050906 ! detection of stimulus involved in sensory perception
@@ -5142,6 +5134,12 @@ property_value: IAO:0000589 "insect wing" xsd:string
 id: INSECT:0000048
 name: tagma
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
+alt_id: AAO:0000988
+def: "The organism subdivision that is composed of segments." []
+comment: DOS: CARO2:  CARO:0010006 ;  tagma def: A subdivision of the organism along the anterior-posterior axis that consists of multiple adjacent segments that are either fused, and/or share more structure with each other than with segments in adjacent tagmata.
+synonym: "tagma" EXACT []
+xref: HAO:0000988
+is_a: AAO:0000032 ! organism subdivision
 is_a: CARO:0010006 ! tagma
 relationship: BFO:0000050 INSECT:0000069 ! insect
 property_value: IAO:0000589 "insect tagma" xsd:string
