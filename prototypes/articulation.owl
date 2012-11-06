@@ -17,8 +17,9 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2012/10/Ontology1351965132865.owl">
+    <owl:Ontology>
         <owl:imports rdf:resource="file:/repositories/AAO_DRAFT/imports/obo_annotation_properties.obo"/>
+        <owl:imports rdf:resource="file:/repositories/AAO_DRAFT/prototypes/arthro_helper.obo"/>
     </owl:Ontology>
     
 
@@ -116,10 +117,46 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/scratch_4c442dad_c1d7_42e4_9bd9_ea71b9c98540 -->
+
+    <owl:ObjectProperty rdf:about="&obo;scratch_4c442dad_c1d7_42e4_9bd9_ea71b9c98540">
+        <rdfs:label xml:lang="en">articulates_with</rdfs:label>
+        <obo:IAO_0000424>has_boundary some (
+     &apos;articular surface&apos; that (
+       in_direct_movable_contact_with some (
+         &apos;articular surface that (
+            boundary_of some ?Y
+         )
+      )
+   )
+)
+</obo:IAO_0000424>
+        <rdfs:comment>Unsure about whether this is worth creating.  Note - property chain could do some useful work, but may be dubious.  At least has to depend on domain and range of its components to prevent nonsense. DOS121105</rdfs:comment>
+        <rdfs:range rdf:resource="&obo;scratch_ae0867d6_507a_4cee_b9d4_d05d1543c949"/>
+        <rdfs:domain rdf:resource="&obo;scratch_ae0867d6_507a_4cee_b9d4_d05d1543c949"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&obo;scratch_316534d6_69ec_4c51_83f7_0c3a4699e077"/>
+            <rdf:Description rdf:about="&obo;scratch_9006ac52_7929_4f2a_ba00_c0cfed740d87"/>
+            <rdf:Description rdf:about="&obo;scratch_e40e2453_5c01_4597_9cd5_5c5de12535f3"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/scratch_5d400190_adde_4009_a4e0_df57287edac0 -->
 
     <owl:ObjectProperty rdf:about="&obo;scratch_5d400190_adde_4009_a4e0_df57287edac0">
         <rdfs:label xml:lang="en">connected_to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/scratch_5eb21be5_a498_44d1_a006_f42e15cfcf98 -->
+
+    <owl:ObjectProperty rdf:about="&obo;scratch_5eb21be5_a498_44d1_a006_f42e15cfcf98">
+        <rdfs:label xml:lang="en">connected_via_conjunctiva_to</rdfs:label>
+        <rdfs:comment>Experimental relation - unsure of utility, expecially given that ability to infer this is v. limited.</rdfs:comment>
+        <obo:IAO_0000424>connected_to some (conjunctiva that connected_to some ?Y)</obo:IAO_0000424>
     </owl:ObjectProperty>
     
 
@@ -160,108 +197,9 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CARO_0000003 -->
+    <!-- http://purl.obolibrary.org/obo/ARTHRO_0000008 -->
 
-    <owl:Class rdf:about="&obo;CARO_0000003">
-        <rdfs:label xml:lang="en">anatomical structure</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CARO_0000006"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CARO_0000006 -->
-
-    <owl:Class rdf:about="&obo;CARO_0000006">
-        <rdfs:label xml:lang="en">material antomical entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CARO_0000007 -->
-
-    <owl:Class rdf:about="&obo;CARO_0000007">
-        <rdfs:label xml:lang="en">immaterial anatomical entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CARO_0000010 -->
-
-    <owl:Class rdf:about="&obo;CARO_0000010">
-        <rdfs:label xml:lang="en">anatomical surface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CARO_0001002"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CARO_0000011 -->
-
-    <owl:Class rdf:about="&obo;CARO_0000011">
-        <rdfs:label xml:lang="en">connected anatomical system</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CARO_0000003"/>
-        <owl:disjointWith rdf:resource="&obo;CARO_0002006"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CARO_0001002 -->
-
-    <owl:Class rdf:about="&obo;CARO_0001002">
-        <rdfs:label xml:lang="en">anatomical boundary</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CARO_0000007"/>
-        <owl:disjointWith rdf:resource="&obo;scratch_0e4bcd75_5742_40f1_84bb_867374002f49"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CARO_0002001 -->
-
-    <owl:Class rdf:about="&obo;CARO_0002001">
-        <rdfs:label xml:lang="en">integumentary system</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CARO_0000011"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CARO_0002006 -->
-
-    <owl:Class rdf:about="&obo;CARO_0002006">
-        <rdfs:label xml:lang="en">region of integument</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CARO_0000003"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;scratch_316534d6_69ec_4c51_83f7_0c3a4699e077"/>
-                <owl:someValuesFrom rdf:resource="&obo;CARO_0002009"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="&obo;CARO_0002001"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CARO_0002009 -->
-
-    <owl:Class rdf:about="&obo;CARO_0002009">
-        <rdfs:label xml:lang="en">integumental surface</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;CARO_0000010"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;scratch_e40e2453_5c01_4597_9cd5_5c5de12535f3"/>
-                <owl:someValuesFrom rdf:resource="&obo;CARO_0002006"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/scratch_03e5523c_7094_485d_a813_5b064ce56127 -->
-
-    <owl:Class rdf:about="&obo;scratch_03e5523c_7094_485d_a813_5b064ce56127">
+    <owl:Class rdf:about="&obo;ARTHRO_0000008">
         <rdfs:label xml:lang="en">sclerite surface</rdfs:label>
         <rdfs:subClassOf>
             <owl:Class>
@@ -283,21 +221,192 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/scratch_0b06d31a_6663_4a2c_b5bc_ca6a2528bdea -->
+    <!-- http://purl.obolibrary.org/obo/CARO_0000003 -->
 
-    <owl:Class rdf:about="&obo;scratch_0b06d31a_6663_4a2c_b5bc_ca6a2528bdea">
+    <owl:Class rdf:about="&obo;CARO_0000003">
+        <rdfs:label xml:lang="en">anatomical structure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CARO_0000006"/>
+        <obo:IAO_0000115 xml:lang="en">Material anatomical entity that is a single connected structure with inherent 3D shape generated by coordinated expression of the organism&apos;s own genome.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0000006 -->
+
+    <owl:Class rdf:about="&obo;CARO_0000006">
+        <rdfs:label xml:lang="en">material antomical entity</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">An anatomical entity that has mass.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0000007 -->
+
+    <owl:Class rdf:about="&obo;CARO_0000007">
+        <rdfs:label xml:lang="en">immaterial anatomical entity</rdfs:label>
+        <obo:IAO_0000115>Anatomical entity that has no mass.</obo:IAO_0000115>
+    </owl:Class>
+    <owl:Axiom>
+        <rdfs:comment>CC:DOS</rdfs:comment>
+        <owl:annotatedTarget>Anatomical entity that has no mass.</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="&obo;CARO_0000007"/>
+        <owl:annotatedProperty rdf:resource="&obo;IAO_0000115"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0000010 -->
+
+    <owl:Class rdf:about="&obo;CARO_0000010">
+        <rdfs:label xml:lang="en">anatomical surface</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CARO_0001002"/>
+        <obo:IAO_0000115 xml:lang="en">A two dimensional anatomical structure that is the boundary between an anatomical structure and an anatomical substance, an anatomical space or the organism&apos;s environment.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0000011 -->
+
+    <owl:Class rdf:about="&obo;CARO_0000011">
+        <rdfs:label xml:lang="en">connected anatomical system</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CARO_0000003"/>
+        <owl:disjointWith rdf:resource="&obo;CARO_0002006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0001002 -->
+
+    <owl:Class rdf:about="&obo;CARO_0001002">
+        <rdfs:label xml:lang="en">anatomical boundary</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CARO_0000007"/>
+        <owl:disjointWith rdf:resource="&obo;scratch_0e4bcd75_5742_40f1_84bb_867374002f49"/>
+        <obo:IAO_0000115>A two dimensional anatomical entity.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Note - except for idealised entities such as axila planes, 2 dimensional entities in anatomy have a 3D projection.  E.g. - the surface of the tip of you little finger, but has a 3D Projection that includes the rifges of your fingerprint and the curve of the end of your finger.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0002001 -->
+
+    <owl:Class rdf:about="&obo;CARO_0002001">
+        <rdfs:label xml:lang="en">integumentary system</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CARO_0000011"/>
+        <obo:IAO_0000115 xml:lang="en">Connected anatomical system that forms a barrier between an animal and its environment - generally consisting of an epidermis, which may be covered by some acellular structure.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0002006 -->
+
+    <owl:Class rdf:about="&obo;CARO_0002006">
+        <rdfs:label xml:lang="en">region of integument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CARO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="&obo;CARO_0002001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;scratch_316534d6_69ec_4c51_83f7_0c3a4699e077"/>
+                <owl:someValuesFrom rdf:resource="&obo;CARO_0002009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0002009 -->
+
+    <owl:Class rdf:about="&obo;CARO_0002009">
+        <rdfs:label xml:lang="en">integumental surface</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;CARO_0000010"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;scratch_e40e2453_5c01_4597_9cd5_5c5de12535f3"/>
+                <owl:someValuesFrom rdf:resource="&obo;CARO_0002006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">The boundary of a region of integument with the environment.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/INSECT_0000121 -->
+
+    <owl:Class rdf:about="&obo;INSECT_0000121">
+        <rdfs:label xml:lang="en">articulation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;scratch_0e4bcd75_5742_40f1_84bb_867374002f49"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0002180"/>
+                <owl:onClass rdf:resource="&obo;INSECT_0000124"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/INSECT_0000124 -->
+
+    <owl:Class rdf:about="&obo;INSECT_0000124">
+        <rdfs:label xml:lang="en">articular surface</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;ARTHRO_0000008"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;scratch_9006ac52_7929_4f2a_ba00_c0cfed740d87"/>
+                        <owl:someValuesFrom rdf:resource="&obo;ARTHRO_0000008"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/INSECT_0000125 -->
+
+    <owl:Class rdf:about="&obo;INSECT_0000125">
         <rdfs:label xml:lang="en">condyle</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;scratch_03e5523c_7094_485d_a813_5b064ce56127"/>
+                    <rdf:Description rdf:about="&obo;ARTHRO_0000008"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;BFO_0000086"/>
                         <owl:someValuesFrom rdf:resource="&obo;scratch_6ce0931e_fb20_41d0_a1a3_bbe1c5bca65c"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;scratch_9006ac52_7929_4f2a_ba00_c0cfed740d87"/>
-                        <owl:someValuesFrom rdf:resource="&obo;scratch_345a7b80_edcc_48aa_abd9_f70af586937f"/>
+                        <owl:someValuesFrom rdf:resource="&obo;INSECT_0000126"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/INSECT_0000126 -->
+
+    <owl:Class rdf:about="&obo;INSECT_0000126">
+        <rdfs:label xml:lang="en">fossa</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;ARTHRO_0000008"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;BFO_0000086"/>
+                        <owl:someValuesFrom rdf:resource="&obo;scratch_eb35269f_51c8_45cd_a2b6_f97a1b6c65b4"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;scratch_9006ac52_7929_4f2a_ba00_c0cfed740d87"/>
+                        <owl:someValuesFrom rdf:resource="&obo;INSECT_0000125"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -311,48 +420,7 @@
     <owl:Class rdf:about="&obo;scratch_0e4bcd75_5742_40f1_84bb_867374002f49">
         <rdfs:label xml:lang="en">anatomical boundary group</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;CARO_0000007"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/scratch_345a7b80_edcc_48aa_abd9_f70af586937f -->
-
-    <owl:Class rdf:about="&obo;scratch_345a7b80_edcc_48aa_abd9_f70af586937f">
-        <rdfs:label xml:lang="en">fossa</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;scratch_03e5523c_7094_485d_a813_5b064ce56127"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;BFO_0000086"/>
-                        <owl:someValuesFrom rdf:resource="&obo;scratch_eb35269f_51c8_45cd_a2b6_f97a1b6c65b4"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;scratch_9006ac52_7929_4f2a_ba00_c0cfed740d87"/>
-                        <owl:someValuesFrom rdf:resource="&obo;scratch_0b06d31a_6663_4a2c_b5bc_ca6a2528bdea"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/scratch_3f1d2354_c2d9_4a9b_9179_446165ec8344 -->
-
-    <owl:Class rdf:about="&obo;scratch_3f1d2354_c2d9_4a9b_9179_446165ec8344">
-        <rdfs:label xml:lang="en">articular surface</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;scratch_03e5523c_7094_485d_a813_5b064ce56127"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;scratch_9006ac52_7929_4f2a_ba00_c0cfed740d87"/>
-                        <owl:someValuesFrom rdf:resource="&obo;scratch_03e5523c_7094_485d_a813_5b064ce56127"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <obo:IAO_0000115 xml:lang="en">A group of two or more anatomical boundaries that are not contiguous with each other.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -364,21 +432,22 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;scratch_82739ae7_63e7_472e_9d2f_aefe1003f68d"/>
+                    <rdf:Description rdf:about="&obo;INSECT_0000121"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;RO_0002180"/>
-                        <owl:onClass rdf:resource="&obo;scratch_0b06d31a_6663_4a2c_b5bc_ca6a2528bdea"/>
+                        <owl:onClass rdf:resource="&obo;INSECT_0000125"/>
                         <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;RO_0002180"/>
-                        <owl:onClass rdf:resource="&obo;scratch_345a7b80_edcc_48aa_abd9_f70af586937f"/>
+                        <owl:onClass rdf:resource="&obo;INSECT_0000126"/>
                         <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;scratch_82739ae7_63e7_472e_9d2f_aefe1003f68d"/>
+        <rdfs:subClassOf rdf:resource="&obo;INSECT_0000121"/>
+        <obo:IAO_0000115 xml:lang="en">A joint composed of two fossa-condyle pairs</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -400,21 +469,22 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;scratch_82739ae7_63e7_472e_9d2f_aefe1003f68d"/>
+                    <rdf:Description rdf:about="&obo;INSECT_0000121"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;RO_0002180"/>
-                        <owl:onClass rdf:resource="&obo;scratch_0b06d31a_6663_4a2c_b5bc_ca6a2528bdea"/>
+                        <owl:onClass rdf:resource="&obo;INSECT_0000125"/>
                         <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;RO_0002180"/>
-                        <owl:onClass rdf:resource="&obo;scratch_345a7b80_edcc_48aa_abd9_f70af586937f"/>
+                        <owl:onClass rdf:resource="&obo;INSECT_0000126"/>
                         <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;scratch_82739ae7_63e7_472e_9d2f_aefe1003f68d"/>
+        <rdfs:subClassOf rdf:resource="&obo;INSECT_0000121"/>
+        <obo:IAO_0000115 xml:lang="en">A joint composed of a single fossa inserted into a condyle.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -426,19 +496,20 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;scratch_82739ae7_63e7_472e_9d2f_aefe1003f68d"/>
+                    <rdf:Description rdf:about="&obo;INSECT_0000121"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;RO_0002180"/>
-                        <owl:someValuesFrom rdf:resource="&obo;scratch_0b06d31a_6663_4a2c_b5bc_ca6a2528bdea"/>
+                        <owl:someValuesFrom rdf:resource="&obo;INSECT_0000125"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;RO_0002180"/>
-                        <owl:someValuesFrom rdf:resource="&obo;scratch_345a7b80_edcc_48aa_abd9_f70af586937f"/>
+                        <owl:someValuesFrom rdf:resource="&obo;INSECT_0000126"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;scratch_82739ae7_63e7_472e_9d2f_aefe1003f68d"/>
+        <rdfs:subClassOf rdf:resource="&obo;INSECT_0000121"/>
+        <obo:IAO_0000115 xml:lang="en">An articulation that that is composed of at least one fossa inserted into at lease one condyle.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -447,22 +518,6 @@
 
     <owl:Class rdf:about="&obo;scratch_725c36c8_77e1_446c_a3f1_b055d2ac3d33">
         <rdfs:label xml:lang="en">quality</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/scratch_82739ae7_63e7_472e_9d2f_aefe1003f68d -->
-
-    <owl:Class rdf:about="&obo;scratch_82739ae7_63e7_472e_9d2f_aefe1003f68d">
-        <rdfs:label xml:lang="en">articulation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;scratch_0e4bcd75_5742_40f1_84bb_867374002f49"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0002180"/>
-                <owl:onClass rdf:resource="&obo;scratch_3f1d2354_c2d9_4a9b_9179_446165ec8344"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -508,25 +563,41 @@
         <rdfs:subClassOf rdf:resource="&obo;scratch_0e4bcd75_5742_40f1_84bb_867374002f49"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0002180"/>
-                <owl:onClass>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;scratch_03e5523c_7094_485d_a813_5b064ce56127"/>
+                            <rdf:Description rdf:about="&obo;ARTHRO_0000008"/>
                             <owl:Class>
                                 <owl:complementOf>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="&obo;scratch_9006ac52_7929_4f2a_ba00_c0cfed740d87"/>
-                                        <owl:someValuesFrom rdf:resource="&obo;scratch_03e5523c_7094_485d_a813_5b064ce56127"/>
+                                        <owl:someValuesFrom rdf:resource="&obo;ARTHRO_0000008"/>
                                     </owl:Restriction>
                                 </owl:complementOf>
                             </owl:Class>
                         </owl:intersectionOf>
                     </owl:Class>
-                </owl:onClass>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;ARTHRO_0000008"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;scratch_379c21ff_6787_49b1_bf37_a2fd60cfdf63"/>
+                                <owl:someValuesFrom rdf:resource="&obo;ARTHRO_0000008"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An anatomical boundary group consisting of two sclerite surfaces that are in contact with each other where that contact is not movable.</obo:IAO_0000115>
     </owl:Class>
     
 

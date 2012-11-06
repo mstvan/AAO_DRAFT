@@ -2,6 +2,7 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="file:/repositories/AAO_DRAFT/imports/obo_annotation_properties.obo" uri="file:/repositories/AAO_DRAFT/imports/obo_annotation_properties.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1351997750252" name="http://www.semanticweb.org/ontologies/2012/10/Ontology1351965132865.owl" uri="articulation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1352114340881" name="file:/repositories/AAO_DRAFT/prototypes/arthro_helper.obo" uri="arthro_helper.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1352114340881" name="http://www.semanticweb.org/ontologies/2012/10/Ontology1351965132865.owl" uri="articulation.owl"/>
     </group>
 </catalog>
