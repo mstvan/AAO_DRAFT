@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 03:11:2012 00:10
+date: 06:11:2012 11:13
 saved-by: djs93
 auto-generated-by: OBO-Edit 2.2
 subsetdef: candidate_for_obsoletion "To be used to flag a term for obsoletion - pending further discussion."
@@ -7,7 +7,7 @@ subsetdef: olfactory_system_draft "adult olfactory system model"
 synonymtypedef: InChIKey ""
 synonymtypedef: systematic_synonym "" EXACT
 default-namespace: AAO
-remark: Draft Arthropod Anatomy Ontology.
+remark: .
 ontology: INSECT
 property_value: http://purl.obolibrary.org/obo/IAO_synonym_typedef "" xsd:string
 property_value: IAO:format-version "1.2" xsd:string
@@ -116,7 +116,7 @@ def: "The tagma that is located posterior to the thorax." [http:///api/ref/96591
 comment: DOS: located immediately posterior to the thorax?  formalise with immediately_posterior_to - subproperty of adjacent_to?
 synonym: "der Hinterleib" RELATED [http://api.hymao.org/api/ref/78598]
 xref: HAO:0000015
-is_a: INSECT:0000048 ! tagma
+is_a: CARO:0010006 ! tagma
 
 [Term]
 id: AAO:0000016
@@ -149,7 +149,7 @@ name: compound organ
 def: "Anatomical structure that has as its parts two or more multi-tissue structures of at least two different types and which through specific morphogenetic processes forms a single distinct structural unit demarcated by bona fide boundaries from other distinct anatomical structures of different types." [http:///api/ref/96591]
 xref: CARO:0000024
 xref: HAO:0000024
-is_a: AAO:0000003 ! anatomical structure
+is_a: CARO:0000003 ! anatomical structure
 
 [Term]
 id: AAO:0000027
@@ -364,7 +364,7 @@ name: cavitated compound organ
 def: "Compound organ that contains one or more macroscopic anatomical spaces." [http:///api/ref/96591]
 xref: CARO:0000072
 xref: HAO:0000072
-is_a: AAO:0000024 ! compound organ
+is_a: CARO:0000003 ! anatomical structure
 
 [Term]
 id: AAO:0000073
@@ -380,7 +380,7 @@ name: solid compound organ
 def: "Compound organ that does not contain macroscopic anatomical spaces." [http:///api/ref/96591]
 xref: CARO:0000074
 xref: HAO:0000074
-is_a: AAO:0000024 ! compound organ
+is_a: CARO:0000003 ! anatomical structure
 
 [Term]
 id: AAO:0000077
@@ -434,7 +434,7 @@ id: AAO:0000089
 name: adult tagma
 def: "The tagma that is part of the adult." [http:///api/ref/96591]
 xref: HAO:0000089
-is_a: INSECT:0000048 ! tagma
+is_a: CARO:0010006 ! tagma
 relationship: BFO:0000050 AAO:0000087 ! adult
 
 [Term]
@@ -452,7 +452,7 @@ def: "The sclerite that is ring-like and is not attached to muscles." [http:///a
 comment: DOS: should annulus be a sclerite or an appendage subdivision?  Former would only be integument - not including whatever is inside.
 synonym: "mere" RELATED [http://api.hymao.org/api/ref/68619]
 xref: HAO:0000096
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
@@ -529,12 +529,6 @@ xref: HAO:0000143
 is_a: AAO:0000142 ! apodeme
 
 [Term]
-id: AAO:0000145
-name: appendage segment
-def: "This is a dummy definition for ontology class AAO:0000145." [http:///api/ref/96591]
-xref: HAO:0000145
-
-[Term]
 id: AAO:0000146
 name: area
 def: "The anatomical structure that is delimited by material or immaterial anatomical entities." [http:///api/ref/96591]
@@ -549,7 +543,7 @@ name: articular line
 def: "The anatomical line that extends on the border between two articulating sclerites." [http:///api/ref/96591]
 comment: DOS: anatomical line is a 2D struc.  Perhaps better classified as a region of integument (conjunctiva)? that is very narrow?
 xref: HAO:0000149
-is_a: AAO:0000008 ! anatomical line
+is_a: CARO:0000008 ! anatomical line
 
 [Term]
 id: AAO:0000150
@@ -558,7 +552,7 @@ def: "The cuticular protuberance that bears the articular surface." [http:///api
 synonym: "articular protuberance" RELATED [http:///api/ref/96644]
 xref: HAO:0000150
 is_a: AAO:0000822 ! process
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000151
@@ -581,7 +575,7 @@ name: bar
 def: "The cuticular protuberance that is linear and wider proximally than distally." [http:///api/ref/96591]
 xref: HAO:0000164
 is_a: AAO:0000822 ! process
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000172
@@ -589,6 +583,7 @@ name: basiconic capitate peg sensillum
 def: "This is a dummy definition for ontology class AAO:0000172." [http:///api/ref/96591]
 comment: see Snodgrass defs of sensilla classified by cuticular component
 xref: HAO:0000172
+is_a: INSECT:0000005 ! sensillum
 
 [Term]
 id: AAO:0000173
@@ -678,7 +673,7 @@ synonym: "ledge" RELATED [http://api.hymao.org/api/ref/96437]
 synonym: "ridge" RELATED [http://api.hymao.org/api/ref/96546]
 xref: HAO:0000188
 is_a: AAO:0000822 ! process
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000191
@@ -692,7 +687,7 @@ synonym: "pygostyle" RELATED [http://api.hymao.org/api/ref/67781]
 synonym: "pygostylus" RELATED [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
 synonym: "socius" RELATED [http://api.hymao.org/api/ref/36875, http://api.hymao.org/api/ref/67823, http://api.hymao.org/api/ref/68619]
 xref: HAO:0000191
-is_a: AAO:0000930 ! sense organ
+is_a: FUNCARO:0000000 ! sense organ
 
 [Term]
 id: AAO:0000198
@@ -741,6 +736,7 @@ name: coeloconic sensillum
 def: "This is a dummy definition for ontology class AAO:0000213." [http:///api/ref/96591]
 comment: see Snodgrass for def.
 xref: HAO:0000213
+is_a: INSECT:0000005 ! sensillum
 
 [Term]
 id: AAO:0000217
@@ -749,7 +745,7 @@ def: "The compound organ that is composed of ommatidia." [http:///api/ref/96591]
 synonym: "Auge" RELATED [http://api.hymao.org/api/ref/78598]
 synonym: "eye" RELATED [http://api.hymao.org/api/ref/68619, http://api.hymao.org/api/ref/78236]
 xref: HAO:0000217
-is_a: AAO:0000024 ! compound organ
+is_a: CARO:0000003 ! anatomical structure
 relationship: BFO:0000050 AAO:0000397 ! head
 
 [Term]
@@ -757,9 +753,9 @@ id: AAO:0000220
 name: condyle
 def: "The articular surface that is convex and is inserted into the fossa of an adjacent sclerite." [http:///api/ref/96591]
 xref: HAO:0000220
-is_a: AAO:0001485 ! articular surface
+is_a: INSECT:0000124 ! articular surface
 relationship: BFO:0000050 AAO:0000151 ! articulation
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000221
@@ -777,7 +773,7 @@ name: corner
 def: "The projection that is located at the intersection of two or more edges." [http:///api/ref/96591]
 xref: HAO:0000223
 is_a: AAO:0000829 ! projection
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000228
@@ -833,7 +829,7 @@ id: AAO:0000234
 name: cranium
 def: "The sclerite that articulates with the mandible and encloses the brain." [http:///api/ref/96591]
 xref: HAO:0000234
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 AAO:0000397 ! head
 relationship: BFO:0000050 AAO:0000398 ! head capsule
 
@@ -866,7 +862,7 @@ id: AAO:0000277
 name: dorso-pleural line
 def: "The anatomical line that is located between the dorsum and the pleuron." [http:///api/ref/96591]
 xref: HAO:0000277
-is_a: AAO:0000008 ! anatomical line
+is_a: CARO:0000008 ! anatomical line
 relationship: BFO:0000050 AAO:0000929 ! segment
 
 [Term]
@@ -920,20 +916,11 @@ is_a: CARO:0000040 ! acellular anatomical structure
 relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
-id: AAO:0000298
-name: epidermis
-def: "The epithelium that is located in the integument and composed of epidermal cells." [http:///api/ref/96591]
-comment: CARO2: CARO:0002000 ;  epidermis def - Epithelium of the integumentary system.
-xref: HAO:0000298
-is_a: AAO:0000066 ! epithelium
-relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
-
-[Term]
 id: AAO:0000309
 name: eusternum
 def: "The sclerite that is located on the thoracic sternum posteriorly of the spinasternum." [http:///api/ref/96591]
 xref: HAO:0000309
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 AAO:0001014 ! thoracic sternum
 
 [Term]
@@ -1014,6 +1001,7 @@ id: AAO:0000348
 name: fore coxa
 def: "This is a dummy definition for ontology class AAO:0000348." [http:///api/ref/96591]
 xref: HAO:0000348
+is_a: INSECT:0000009 ! appendage segment
 
 [Term]
 id: AAO:0000353
@@ -1021,9 +1009,9 @@ name: fossa
 def: "The articular surface that is concave and accommodates the condyle of another sclerite." [http:///api/ref/96591]
 synonym: "acetabulum" RELATED [http://api.hymao.org/api/ref/78442]
 xref: HAO:0000353
-is_a: AAO:0001485 ! articular surface
+is_a: INSECT:0000124 ! articular surface
 relationship: BFO:0000050 AAO:0000151 ! articulation
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000364
@@ -1085,7 +1073,7 @@ id: AAO:0000379
 name: gonad
 def: "The compound organ that makes gametes." [http:///api/ref/96591]
 xref: HAO:0000379
-is_a: AAO:0000024 ! compound organ
+is_a: CARO:0000003 ! anatomical structure
 relationship: BFO:0000050 AAO:0000895 ! reproductive system
 
 [Term]
@@ -1093,7 +1081,7 @@ id: AAO:0000397
 name: head
 def: "The region that contains the brain." [http:///api/ref/96591]
 xref: HAO:0000397
-is_a: INSECT:0000048 ! tagma
+is_a: CARO:0010006 ! tagma
 relationship: BFO:0000050 AAO:0000182 ! body
 
 [Term]
@@ -1112,7 +1100,7 @@ def: "The groove that does not correspond to a ridge." [http:///api/ref/96591]
 synonym: "groove" RELATED [http://api.hymao.org/api/ref/36874, http://api.hymao.org/api/ref/68619]
 xref: HAO:0000417
 is_a: AAO:0001525 ! groove
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000418
@@ -1120,7 +1108,7 @@ name: inflection
 def: "The anatomical cluster that is composed of a ridge that extends along the margin of a sclerite and the marginal area of the sclerite delimited from the sclerite by the ridge articulating with the inflection of another sclerite." [http:///api/ref/96591]
 xref: HAO:0000418
 is_a: CARO:0000041 ! clustered anatomical group
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000431
@@ -1142,7 +1130,7 @@ id: AAO:0000436
 name: intersegmentalia
 def: "The sclerite that is located on the intersegmental membrane." [http:///api/ref/96591]
 xref: HAO:0000436
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
@@ -1159,7 +1147,7 @@ name: interstice
 def: "The area that is unsculptured and is delimited by striae or punctures." [http:///api/ref/96591]
 xref: HAO:0000438
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000456
@@ -1167,7 +1155,7 @@ name: labrum
 def: "The sclerite that is situated along the distal margin of the clypeus and is connected along its proximal margin with the distal margin of the epipharyngeal wall." [http:///api/ref/96591]
 synonym: "labral sclerite" RELATED [http://api.hymao.org/api/ref/43406, http://api.hymao.org/api/ref/68619]
 xref: HAO:0000456
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 AAO:0000639 ! mouthparts
 
 [Term]
@@ -1201,7 +1189,7 @@ name: mandible
 def: "The sclerite that is connected to the cranium along the anterior margin of the oral foramen via the anterior and posterior cranio-mandibular articulations." [http:///api/ref/96591]
 comment: DOS: Surely a gnathal appendage rather than a sclerite
 xref: HAO:0000506
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 AAO:0000639 ! mouthparts
 
 [Term]
@@ -1266,7 +1254,7 @@ name: muscle
 def: "The anatomical structure that contains myosine filaments." [http:///api/ref/96644]
 xref: HAO:0000641
 xref: ZFA:0005145
-is_a: AAO:0000043 ! portion of tissue
+is_a: CARO:0000043 ! tissue
 relationship: BFO:0000050 AAO:0000012 ! multi-cellular organism
 
 [Term]
@@ -1286,23 +1274,13 @@ relationship: BFO:0000050 AAO:0001013 ! thoracic segment
 relationship: BFO:0000050 AAO:0001015 ! thorax
 
 [Term]
-id: AAO:0000661
-name: ocellus
-def: "The multi-tissue structure that is located on the top of the head, composed of the corneal lens, pigment cell, rhabdoms and synaptic plexus." [http:///api/ref/96591]
-comment: DOS: is_a sensillum?
-synonym: "simple eye" RELATED [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
-xref: HAO:0000661
-is_a: AAO:0000055 ! multi-tissue structure
-relationship: BFO:0000050 AAO:0000234 ! cranium
-
-[Term]
 id: AAO:0000666
 name: ommatidium
 def: "One of the facets of the compound eye." [http:///api/ref/96591]
 comment: DOS: is_a sensillum?
 xref: FBbt:00004510
 xref: HAO:0000666
-is_a: AAO:0000024 ! compound organ
+is_a: CARO:0000003 ! anatomical structure
 relationship: BFO:0000050 AAO:0000217 ! compound eye
 
 [Term]
@@ -1355,7 +1333,7 @@ id: AAO:0000727
 name: pleurite
 def: "The sclerite that is located on the pleuron." [http:///api/ref/96591]
 xref: HAO:0000727
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 AAO:0000729 ! pleuron
 
 [Term]
@@ -1363,7 +1341,7 @@ id: AAO:0000729
 name: pleuron
 def: "The sclerite that articulates with the leg and is connected along its dorsal margin with the notum and ventral margin with the sternum." [http:///api/ref/96591]
 xref: HAO:0000729
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 AAO:0001013 ! thoracic segment
 
 [Term]
@@ -1420,7 +1398,7 @@ def: "The anatomical cluster that is composed of repeated units of anatomical st
 comment: presumably need to be aligned too.
 xref: HAO:0000901
 is_a: CARO:0000041 ! clustered anatomical group
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000902
@@ -1444,7 +1422,7 @@ name: ruga
 def: "The carina that is irregularly non-linear." [http:///api/ref/96591]
 xref: HAO:0000904
 is_a: AAO:0000188 ! carina
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000907
@@ -1463,22 +1441,12 @@ xref: HAO:0000908
 is_a: AAO:0000104 ! antennal segment
 
 [Term]
-id: AAO:0000909
-name: sclerite
-def: "The area that is rigid, with thick exocuticle and thin endocuticle and is delimited by conjunctivae." [http:///api/ref/96591]
-synonym: "plate" RELATED [http://api.hymao.org/api/ref/68619]
-synonym: "sclerome" RELATED [http://api.hymao.org/api/ref/78428]
-xref: HAO:0000909
-is_a: AAO:0000146 ! area
-relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
-
-[Term]
 id: AAO:0000912
 name: scrobe
 def: "The area that is impressed and is for the reception or concealment of another sclerite." [http:///api/ref/96591]
 xref: HAO:0000912
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000913
@@ -1486,7 +1454,7 @@ name: sculpture
 def: "The area that is located on the sclerite and that is composed of repetitive anatomical structures." [http:///api/ref/96591]
 xref: HAO:0000913
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000929
@@ -1544,7 +1512,7 @@ name: signum
 def: "The area that corresponds to the site of the origin of a muscle." [http:///api/ref/96591]
 xref: HAO:0000938
 is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000947
@@ -1559,7 +1527,7 @@ id: AAO:0000948
 name: spinasternum
 def: "The sclerite that is located anteriorly on the thoracic sternum and bears the spina." [http:///api/ref/96591]
 xref: HAO:0000948
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 AAO:0001014 ! thoracic sternum
 
 [Term]
@@ -1569,7 +1537,7 @@ def: "The cuticular protuberance that is not surrounded by conjunctiva." [http:/
 synonym: "aculea" RELATED [http://api.hymao.org/api/ref/43406, http://api.hymao.org/api/ref/67791, http://api.hymao.org/api/ref/67829]
 xref: HAO:0000949
 is_a: AAO:0000822 ! process
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000950
@@ -1585,7 +1553,7 @@ name: spur
 def: "The cuticular protuberance that is a sclerite." [http:///api/ref/96591]
 xref: HAO:0000951
 is_a: AAO:0000822 ! process
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 
 [Term]
@@ -1594,7 +1562,7 @@ name: sternite
 def: "The sclerite that is located on the sternum." [http:///api/ref/96591]
 synonym: "sternum" RELATED [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
 xref: HAO:0000955
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 AAO:0000956 ! sternum
 
 [Term]
@@ -1611,7 +1579,7 @@ id: AAO:0000958
 name: stipes
 def: "The sclerite that is located in the maxilla and articulates proximally with the cardo, distally with the galea and lacinia, and laterally with the maxillary palp." [http:///api/ref/96591]
 xref: HAO:0000958
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 AAO:0000513 ! maxilla
 
 [Term]
@@ -1622,7 +1590,7 @@ synonym: "furrow" RELATED [http://api.hymao.org/api/ref/67791, http://api.hymao.
 synonym: "suture" RELATED [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
 xref: HAO:0000978
 is_a: AAO:0001525 ! groove
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0000982
@@ -1656,7 +1624,7 @@ id: AAO:0000996
 name: tendon
 def: "The portion of tissue that is fibrous, strong, composed of tendon cells and connects the muscle to the integument." [http:///api/ref/96591]
 xref: HAO:0000996
-is_a: AAO:0000043 ! portion of tissue
+is_a: CARO:0000043 ! tissue
 relationship: BFO:0000050 AAO:0000182 ! body
 
 [Term]
@@ -1672,7 +1640,7 @@ id: AAO:0001005
 name: tergite
 def: "The sclerite that is located on the tergum." [http:///api/ref/96591]
 xref: HAO:0001005
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 AAO:0001006 ! tergum
 
 [Term]
@@ -1713,7 +1681,7 @@ id: AAO:0001015
 name: thorax
 def: "The tagma that is composed of the prothorax, mesothorax and metathorax." [http:///api/ref/96591]
 xref: HAO:0001015
-is_a: INSECT:0000048 ! tagma
+is_a: CARO:0010006 ! tagma
 
 [Term]
 id: AAO:0001017
@@ -1754,7 +1722,7 @@ name: umbilicated fovea
 def: "The depression that is medially raised and bears medially a seta." [http:///api/ref/96591]
 xref: HAO:0001040
 is_a: AAO:0000241 ! depression
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0001076
@@ -1900,15 +1868,6 @@ is_a: AAO:0000638 ! monocondylic joint
 relationship: BFO:0000050 AAO:0000992 ! tarsus
 
 [Term]
-id: AAO:0001485
-name: articular surface
-def: "The area that is located on the sclerite and that makes movable direct contact with another sclerite." [http:///api/ref/96591]
-synonym: "articulation" RELATED [http://api.hymao.org/api/ref/36895]
-xref: HAO:0001485
-is_a: AAO:0000146 ! area
-relationship: BFO:0000050 AAO:0000909 ! sclerite
-
-[Term]
 id: AAO:0001506
 name: distal fossa of the tarsomere
 def: "The fossa that is located distodorsally on the tarsomere and accomodates the proximal condyle of the subsequent tarsomere." [http:///api/ref/96591]
@@ -1931,14 +1890,14 @@ name: groove
 def: "The line that is located on the sclerite and is impressed." [http:///api/ref/96591]
 xref: HAO:0001525
 is_a: AAO:0001586 ! line
-relationship: BFO:0000050 AAO:0000909 ! sclerite
+relationship: BFO:0000050 INSECT:0000080 ! sclerite
 
 [Term]
 id: AAO:0001529
 name: genuflexor plate
 def: "The sclerite that is located posteriorly along the proximal margin of the tibia and corresponds to the site of insertion of the posterior femoro-tibial muscle." [http:///api/ref/96591]
 xref: HAO:0001529
-is_a: AAO:0000909 ! sclerite
+is_a: INSECT:0000080 ! sclerite
 relationship: BFO:0000050 AAO:0000494 ! leg
 
 [Term]
@@ -2347,6 +2306,7 @@ relationship: BFO:0000050 ARTHRO:0000006 ! cuticle
 id: AAO:0001970
 name: thorax
 def: "The anatomical cluster that is composed of the pterothorax and the metapectus." [http:///api/ref/96591]
+comment: Hymenopteran specific def?  Should we keep 'thorax' for true tagmata, just refering to T segments in hymenoptera - with tagma being mesosoma and metasoma in this case?
 xref: HAO:0001970
 is_a: AAO:0000041 ! anatomical cluster
 
@@ -2604,7 +2564,7 @@ is_a: ARHTRO:0008000 ! synaptic neuropil domain
 id: ARTHRO:0008230
 name: mesosoma
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
-is_a: INSECT:0000048 ! tagma
+is_a: CARO:0010006 ! tagma
 relationship: BFO:0000051 ARTHRO:0008232 ! insect abdominal segment 1
 relationship: BFO:0000051 INSECT:0000033 ! prothoracic segment
 relationship: BFO:0000051 INSECT:0000034 ! mesothoracic segment
@@ -2614,7 +2574,7 @@ relationship: BFO:0000051 INSECT:0000035 ! metathoracic segment
 id: ARTHRO:0008231
 name: Tagma that consists of A2+ in animals that have a mesosoma.
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
-is_a: INSECT:0000048 ! tagma
+is_a: CARO:0010006 ! tagma
 
 [Term]
 id: ARTHRO:0008232
@@ -3164,8 +3124,13 @@ relationship: BFO:0000050 CARO:0001001 ! neuron projection bundle
 id: CARO:0002000
 name: epidermis
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
-def: "Epithelium of the integumentary system." []
+alt_id: AAO:0000298
+def: "MERGED DEFINITION:\nTARGET DEFINITION: Epithelium of the integumentary system.\n--------------------\nSOURCE DEFINITION: The epithelium that is located in the integument and composed of epidermal cells." []
+comment: CARO2: CARO:0002000 ;  epidermis def - Epithelium of the integumentary system.
+synonym: "epidermis" EXACT []
+xref: HAO:0000298
 is_a: CARO:0000066 ! epithelium
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
 relationship: BFO:0000050 CARO:0002001 ! integumentary system
 property_value: IAO:0000589 "epidermis" xsd:string
 
@@ -3262,9 +3227,15 @@ property_value: http://purl.obolibrary.org/obo/IAO_creation_date "Fri Mar 04 07:
 id: CARO:0010006
 name: tagma
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
+alt_id: AAO:0000988
+alt_id: INSECT:0000048
 def: "A subdivision of the organism along the anterior-posterior axis that consists of multiple adjacent segments that are either fused, and/or share more structure with each other than with segments in adjacent tagmata." []
+comment: DOS: CARO2:  CARO:0010006 ;  tagma def: A subdivision of the organism along the anterior-posterior axis that consists of multiple adjacent segments that are either fused, and/or share more structure with each other than with segments in adjacent tagmata.
+synonym: "tagma" EXACT []
+xref: HAO:0000988
 is_a: CARO:0000032 ! organism subdivision
 disjoint_from: CARO:0010007 ! appendage segment
+relationship: BFO:0000050 INSECT:0000069 ! insect
 property_value: http://purl.obolibrary.org/obo/IAO_created_by "djs93" xsd:string
 property_value: http://purl.obolibrary.org/obo/IAO_creation_date "Fri Mar 04 07:14:57 GMT 2011" xsd:string
 
@@ -4805,8 +4776,10 @@ property_value: IAO:0000589 "segment of insect antenna" xsd:string
 [Term]
 id: INSECT:0000009
 name: appendage segment
-namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
+alt_id: AAO:0000145
 def: "A metameric subdivision of an insect segmented appendage along its proximal-distal axis. Adjacent appendage segments (podomeres) are connected by a joint and contain muscle attachment sites." []
+synonym: "appendage segment" EXACT []
+xref: HAO:0000145
 is_a: CARO:0010007 ! appendage segment
 relationship: BFO:0000050 ARTHRO:0000130 ! articulated, segmented, paired appendage
 property_value: IAO:0000589 "insect appendage segment" xsd:string
@@ -5030,7 +5003,6 @@ comment: DOS: Think this is v.unsatisfactory. See latest CARO2 and ARTHRO/INSECT
 synonym: "appendage" EXACT []
 xref: HAO:0000144
 is_a: CARO:0010003 ! appendage
-relationship: BFO:0000050 AAO:0000012 ! multi-cellular organism
 relationship: BFO:0000050 INSECT:0000069 ! insect
 property_value: IAO:0000589 "insect appendage" xsd:string
 
@@ -5131,24 +5103,10 @@ is_a: INSECT:0000037 ! dorsal thoracic appendage
 property_value: IAO:0000589 "insect wing" xsd:string
 
 [Term]
-id: INSECT:0000048
-name: tagma
-namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
-alt_id: AAO:0000988
-def: "The organism subdivision that is composed of segments." []
-comment: DOS: CARO2:  CARO:0010006 ;  tagma def: A subdivision of the organism along the anterior-posterior axis that consists of multiple adjacent segments that are either fused, and/or share more structure with each other than with segments in adjacent tagmata.
-synonym: "tagma" EXACT []
-xref: HAO:0000988
-is_a: AAO:0000032 ! organism subdivision
-is_a: CARO:0010006 ! tagma
-relationship: BFO:0000050 INSECT:0000069 ! insect
-property_value: IAO:0000589 "insect tagma" xsd:string
-
-[Term]
 id: INSECT:0000049
 name: head
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
-is_a: INSECT:0000048 ! tagma
+is_a: CARO:0010006 ! tagma
 disjoint_from: INSECT:0000050 ! thorax
 property_value: IAO:0000589 "insect head" xsd:string
 
@@ -5157,14 +5115,14 @@ id: INSECT:0000050
 name: thorax
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
 def: "Insect tagma that is a fusion of segments T1-3." []
-is_a: INSECT:0000048 ! tagma
+is_a: CARO:0010006 ! tagma
 property_value: IAO:0000589 "insect thorax" xsd:string
 
 [Term]
 id: INSECT:0000051
 name: abdomen
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
-is_a: INSECT:0000048 ! tagma
+is_a: CARO:0010006 ! tagma
 property_value: IAO:0000589 "insect abdomen" xsd:string
 
 [Term]
@@ -5386,8 +5344,13 @@ relationship: RO:0002180 INSECT:0000066 {cardinality="1"} ! scolopidium
 id: INSECT:0000077
 name: ocellus
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
-def: "Simple, light sensing organ located on or near the vertex of the head." []
-is_a: INSECT:0000005 ! sensillum
+alt_id: AAO:0000661
+def: "MERGED DEFINITION:\nTARGET DEFINITION: Simple, light sensing organ located on or near the vertex of the head.\n--------------------\nSOURCE DEFINITION: The multi-tissue structure that is located on the top of the head, composed of the corneal lens, pigment cell, rhabdoms and synaptic plexus." []
+comment: DOS: is_a sensillum?
+synonym: "ocellus" EXACT []
+synonym: "simple eye" RELATED [http://canacoll.org/Hym/Staff/Gibson/apss/chalglos.htm]
+xref: HAO:0000661
+relationship: BFO:0000050 AAO:0000234 ! cranium
 relationship: BFO:0000050 INSECT:0000049 {comment="Should have more restrictive part_of parent"} ! head
 
 [Term]
@@ -5413,8 +5376,18 @@ property_value: IAO:0000589 "region of insect integument" xsd:string
 id: INSECT:0000080
 name: sclerite
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
-def: "A region of the integument where the cuticle is well sclerotised (hardened) with thick exocuticle." []
+alt_id: AAO:0000909
+def: "A region of the integument that is hardened, typically with thick exocuticle, and which bounded by relatively less hardened regions of the integument." []
+comment: Earlier versions of this def specified bounded by conjunctivae, but in discussion at the Asilomar meeting we decided to keep this broad - a long, narrow region with relatively low levels of hardening may count as a depression or groove but not as a conjunctiva.
+synonym: "plate" RELATED [http://api.hymao.org/api/ref/68619]
+synonym: "sclerite" EXACT []
+synonym: "sclerome" RELATED [http://api.hymao.org/api/ref/78428]
+xref: HAO:0000909
+is_a: AAO:0000146 ! area
 is_a: INSECT:0000079 ! region of integument
+relationship: BFO:0000050 ARHTRO:0000101 ! integumentary system
+relationship: has_boundary ARTHRO:0000007 ! sclerite-conjunctiva boundary
+relationship: has_boundary ARTHRO:0000008 ! sclerite surface
 property_value: IAO:0000589 "insect sclerite" xsd:string
 
 [Term]
@@ -5738,6 +5711,7 @@ property_value: IAO:0000589 "insect ridge apodeme" xsd:string
 [Term]
 id: INSECT:0000121
 name: articulation
+def: "An anatomical boundary group that is composed of two articular surfaces in direct, movable contact." []
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
 is_a: INSECT:0000079 ! region of integument
 property_value: IAO:0000589 "insect articulation" xsd:string
@@ -5760,8 +5734,13 @@ relationship: RO:0002180 INSECT:0000125 {cardinality="2"} ! condyle
 id: INSECT:0000124
 name: articular surface
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
-def: "\"A region of sclerite and that makes movable direct contact with another sclerite.\" [\"HAO:im, INC:dos]" []
-is_a: INSECT:0000079 ! region of integument
+alt_id: AAO:0001485
+def: "A sclerite surface that makes direct, movable direct contact with another sclerite." [arthrocur:pheno_rcn]
+synonym: "articular surface" EXACT []
+synonym: "articulation" RELATED [http://api.hymao.org/api/ref/36895]
+xref: HAO:0001485
+is_a: AAO:0000146 ! area
+is_a: CARO_0002009 ! integumental surface
 relationship: BFO:0000050 INSECT:0000080 ! sclerite
 relationship: BFO:0000050 INSECT:0000121 ! articulation
 property_value: IAO:0000589 "insect articular surface" xsd:string
@@ -5776,6 +5755,7 @@ is_a: INSECT:0000124 ! articular surface
 [Term]
 id: INSECT:0000126
 name: fossa
+def: "An articular surface that is concave." [AC:Asilomar]
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
 is_a: INSECT:0000124 ! articular surface
 
@@ -6053,9 +6033,19 @@ xref: BFO:000015
 domain: CARO:0000000 ! anatomical entity
 
 [Typedef]
+id: has_boundary
+name: has boundary
+xref: CARO:0002006
+
+[Typedef]
 id: http://purl.obolibrary.org/obo/CARO_has_quality
 name: has_quality
 namespace: file:/repositories/arthropod-anatomy-ontology/trunk/ontologies/trunk/INSECT-relaxed_obo_safe.obo
+
+[Typedef]
+id: member_of
+name: member of
+xref: CARO:0002006
 
 [Typedef]
 id: OBO_REL:0000004
